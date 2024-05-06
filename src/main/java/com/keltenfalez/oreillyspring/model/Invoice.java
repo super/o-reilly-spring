@@ -8,8 +8,8 @@ import javax.persistence.*;
 import java.time.LocalTime;
 import java.util.Map;
 
-//@Entity
-//@Table(name  = "invoice")
+@Entity
+@Table(name  = "invoice")
 @Getter
 @Setter
 @AllArgsConstructor
