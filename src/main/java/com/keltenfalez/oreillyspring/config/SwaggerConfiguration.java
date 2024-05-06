@@ -13,6 +13,9 @@ import java.util.Collections;
 
 @Configuration
 @EnableSwagger2
+/*
+I use swagger to provide API documentation details. I view them here: http://localhost:8080/swagger-ui/#
+ */
 public class SwaggerConfiguration {
 	private ApiInfo apiDetails() {
 		return new ApiInfo(
@@ -31,7 +34,7 @@ public class SwaggerConfiguration {
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
-				.apis(RequestHandlerSelectors.basePackage("com.keltenfalez.invoice"))
+				.apis(RequestHandlerSelectors.basePackage("com.keltenfalez"))
 				.paths(PathSelectors.any())
 				.build()
 				.apiInfo(apiDetails());

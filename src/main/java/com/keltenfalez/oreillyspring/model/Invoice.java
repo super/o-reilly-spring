@@ -2,6 +2,7 @@ package com.keltenfalez.oreillyspring.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.keltenfalez.oreillyspring.utils.HashMapConverter;
+import io.swagger.annotations.ApiModel;
 import lombok.*;
 
 import javax.persistence.*;
@@ -14,6 +15,7 @@ import java.util.Map;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ApiModel(description = "Invoice details")
 public class Invoice {
 
 	@Id
