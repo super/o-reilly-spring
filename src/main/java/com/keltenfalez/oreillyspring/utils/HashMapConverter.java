@@ -24,6 +24,9 @@ public class HashMapConverter implements AttributeConverter<Map<String, Object>,
 	private ObjectMapper objectMapper;
 
 	@Override
+	/*
+	Takes the Map object tenderDetails and writes it to JSON format using Jackson
+	 */
 	public String convertToDatabaseColumn(Map<String, Object> tenderDetails) {
 		String tenderDetailsJson = null;
 
@@ -37,6 +40,9 @@ public class HashMapConverter implements AttributeConverter<Map<String, Object>,
 	}
 
 	@Override
+	/*
+	Takes the JSON as a Str value and writes it to a HashMap<String, Object> using Jackson
+	 */
 	public Map<String, Object> convertToEntityAttribute(String tenderDetailsJson) {
 		Map<String, Object> tenderDetails = null;
 		try {
